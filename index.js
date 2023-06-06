@@ -20,7 +20,7 @@ app.use(express.json());
 
 async function createGroupsCollection(id) {
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     defaultViewport: null,
     args: ["--disable-notifications"],
   });
@@ -69,5 +69,5 @@ app.get("/api/search/:id", async function (req, res) {
   res.send(result);
 });
 
-const port = process.env.PORT || 3555;
+const port = process.env.PORT || 3255;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
