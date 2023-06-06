@@ -49,7 +49,7 @@ async function createGroupsCollection(id) {
   }
 }
 
-app.post("/api/post", async function (req, res) {
+app.post("/api/get-users", async function (req, res) {
   const id = req.body.id;
   console.log(id);
   const posts = await createGroupsCollection(id);
